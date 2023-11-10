@@ -7,7 +7,7 @@ const port = 3001; // Choose a port for your proxy server
 app.use(express.json());
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*'); // Allow all origins (you might want to restrict this in a production environment)
+  res.header('Access-Control-Allow-Origin', 'https://sunaina60.github.io'); // Allow all origins (you might want to restrict this in a production environment)
   res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE');
   res.header('Access-Control-Allow-Headers', 'Content-Type');
   next();
