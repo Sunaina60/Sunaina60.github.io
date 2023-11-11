@@ -15,7 +15,7 @@ app.use((req, res, next) => {
 
 app.get('/categories', async (req, res) => {
   try {
-    const response = await axios.get('https://davids-restaurant.herokuapp.com/categories.json');
+    const response = await axios.get('https://coursera-jhu-default-rtdb.firebaseio.com/categories.json');
     res.json(response.data);
   } catch (error) {
     console.error(error);
@@ -26,7 +26,7 @@ app.get('/categories', async (req, res) => {
 app.get('/menu_items/:category', async (req, res) => {
   const category = req.params.category;
   try {
-    const response = await axios.get(`https://davids-restaurant.herokuapp.com/menu_items.json?category=${category}`);
+    const response = await axios.get(`https://coursera-jhu-default-rtdb.firebaseio.com/menu_items.json?category=${category}`);
     res.json(response.data);
   } catch (error) {
     console.error(error);
